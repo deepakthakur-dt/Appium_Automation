@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite" parallel="tests" thread-count="2">
+    <listeners>
+        <listener class-name="Resources.Listeners" />
+        <listener class-name="Resources.ExtentReport" />
+    </listeners>
+    <test verbose="2" preserve-order="true" name="Test1">
+        <parameter name="deviceName" value="sdk_gphone_x86"/>
+        <parameter name="platformVersion" value="11"/>
+        <parameter name="portNumber" value="4720"/>
+        <classes>
+            <class name="TestCases.CheckOutPageParallelTest">
+
+            </class>
+        </classes>
+    </test>
+    <test verbose="2" preserve-order="true" name="Test2">
+        <parameter name="deviceName" value="Device-2"/>
+        <parameter name="platformVersion" value="9"/>
+        <parameter name="portNumber" value="4722"/>
+        <classes>
+            <class name="TestCases.CheckOutPageParallelTest2">
+
+            </class>
+        </classes>
+    </test>
+</suite>
